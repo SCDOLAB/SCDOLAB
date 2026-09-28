@@ -12,7 +12,7 @@ Ethereum wallets such as MetaMask can use directly.
 
 | Network | Client | Consensus | Chain ID | Decimals | Block reward | Endpoints |
 |---|---|---|---|---|---|---|
-| **Shard 0** (EVM) | [`scdo-shard0`](https://github.com/SCDOLAB/scdo-shard0) (`parallel-node`) | Single producer node, 2 s blocks | **568** (`0x238`) | **18** | none (fees only) | RPC `https://scdoscan.io/rpc/0` |
+| **Shard 0** (EVM) | [`scdo-shard0`](https://github.com/SCDOLAB/scdo-shard0) (`parallel-node`) | Single producer node, 2 s blocks | **5680** (`0x1630`) | **18** | none (fees only) | RPC `https://scdoscan.io/rpc/0` |
 | **Shard 1** | [`go-scdo`](https://github.com/SCDOLAB/go-scdo) | ZPoW (CPU) | n/a | **8** | 3 SCDO* | P2P port **8057** |
 | **Shard 2** | `go-scdo` | ZPoW (CPU) | n/a | **8** | 3 SCDO* | P2P port **8058** |
 | **Shard 3** | `go-scdo` | ZPoW (CPU) | n/a | **8** | 3 SCDO* | P2P port **8059** |
@@ -25,7 +25,7 @@ Ethereum wallets such as MetaMask can use directly.
 Public P2P seed hosts for shards 1-4 (TCP + UDP, one port per shard as above):
 `74.208.207.184`, `82.223.19.88`, `74.208.136.152`, `217.160.65.210`.
 
-**Add shard 0 to MetaMask:** RPC URL `https://scdoscan.io/rpc/0`, chain ID `568`,
+**Add shard 0 to MetaMask:** RPC URL `https://scdoscan.io/rpc/0`, chain ID `5680`,
 symbol `SCDO`, explorer `https://scdoscan.io`.
 
 ## Mining: there is no pool
