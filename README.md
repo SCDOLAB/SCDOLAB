@@ -23,7 +23,7 @@ Ethereum wallets such as MetaMask can use directly.
 8 decimals: 1 SCDO = 100,000,000 wen (`common.ScdoToWen`).
 
 Public P2P seed hosts for shards 1-4 (TCP + UDP, one port per shard as above):
-`74.208.207.184`, `82.223.19.88`, `74.208.136.152`.
+`74.208.207.184`, `82.223.19.88`, `74.208.136.152`, `217.160.65.210`.
 
 **Add shard 0 to MetaMask:** RPC URL `https://scdoscan.io/rpc/0`, chain ID `568`,
 symbol `SCDO`, explorer `https://scdoscan.io`.
