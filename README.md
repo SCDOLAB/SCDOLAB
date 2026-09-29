@@ -38,8 +38,6 @@ explorer `https://scdoscan.io`.
 <https://scdoscan.io/downloads/shard0/> (also in [scdo-gpu-miner releases](https://github.com/SCDOLAB/scdo-gpu-miner/releases)).
 It runs your own shard 0 node plus the `scdo-stratum` proxy on your PC, so the blocks you find pay
 your own address. Any Ethash stratum miner can connect to that local proxy.
-There is also a public stratum endpoint, `82.223.19.88:3333`. It is a solo proxy in front of the
-operator's node, so blocks found through it are paid to the operator's address, not to the miner.
 Use the package if you want the rewards yourself.
 
 **Shards 1-4 (ZPoW).** Solo mining with your own go-scdo full node (the history is about 25 GB):
