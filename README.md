@@ -4,43 +4,43 @@ Open-source software for the **SCDO** blockchain. The only official website is
 **[scdoscan.io](https://scdoscan.io)** (explorer, web wallet, downloads). Treat any other
 site, app or "pool" that uses the SCDO name as unaffiliated.
 
-SCDO has two parts:
+SCDO has two parts, both producing blocks:
 
-* **Shard 0**: an EVM chain run by a [core-geth](https://github.com/etclabscore/core-geth) fork,
+* **SCDO Shard0 (EVM)**: an EVM chain run by a [core-geth](https://github.com/etclabscore/core-geth) fork,
   Ethash proof of work, **chain ID 5680** (`0x1630`). MetaMask and other Ethereum wallets work directly.
-* **Shards 1-4**: the original sharded proof-of-work chain ([go-scdo](https://github.com/SCDOLAB/go-scdo),
+* **SCDO Shard1 (Classic)** to **SCDO Shard4 (Classic)**: the original sharded proof-of-work chain ([go-scdo](https://github.com/SCDOLAB/go-scdo),
   ZPoW, cross-shard transactions).
 
 ## Networks
 
 | Network | Client | Consensus | Chain ID | Decimals | Endpoints |
 |---|---|---|---|---|---|
-| **Shard 0** (EVM) | [`scdo-shard0`](https://github.com/SCDOLAB/scdo-shard0) (core-geth v1.12.23 fork) | Ethash PoW, 2 SCDO per block + fees | **5680** (`0x1630`) | **18** | RPC `https://scdoscan.io/rpc/0`, P2P `82.223.19.88:30368` |
-| **Shard 1** | [`go-scdo`](https://github.com/SCDOLAB/go-scdo) | ZPoW | n/a | **8** | P2P port **8057** |
-| **Shard 2** | `go-scdo` | ZPoW | n/a | **8** | P2P port **8058** |
-| **Shard 3** | `go-scdo` | ZPoW | n/a | **8** | P2P port **8059** |
-| **Shard 4** | `go-scdo` | ZPoW | n/a | **8** | P2P port **8056** |
+| **SCDO Shard0 (EVM)** | [`scdo-shard0`](https://github.com/SCDOLAB/scdo-shard0) (core-geth v1.12.23 fork) | Ethash PoW, 2 SCDO per block + fees | **5680** (`0x1630`) | **18** | RPC `https://scdoscan.io/rpc/0`, P2P `82.223.19.88:30368` |
+| **SCDO Shard1 (Classic)** | [`go-scdo`](https://github.com/SCDOLAB/go-scdo) | ZPoW | n/a | **8** | P2P port **8057** |
+| **SCDO Shard2 (Classic)** | `go-scdo` | ZPoW | n/a | **8** | P2P port **8058** |
+| **SCDO Shard3 (Classic)** | `go-scdo` | ZPoW | n/a | **8** | P2P port **8059** |
+| **SCDO Shard4 (Classic)** | `go-scdo` | ZPoW | n/a | **8** | P2P port **8056** |
 
-Shard 0 genesis: [scdo-shard0-genesis.json](https://scdoscan.io/downloads/shard0/scdo-shard0-genesis.json)
+SCDO Shard0 (EVM) genesis: [scdo-shard0-genesis.json](https://scdoscan.io/downloads/shard0/scdo-shard0-genesis.json)
 (genesis hash `0xbbb083…70cb12`). Bootnode:
 `enode://1d2c370db7c419349e2313f20023f6b379f946990042b9b42df45cb56e4c3487df0d36c52cd81308fcdf312450f758a6213fcac21213e94a71af4a3c9392601f@82.223.19.88:30368`
 
-Shards 1-4: block reward 3 SCDO in the current era, dropping to 2.5 SCDO at height 9,450,000
+SCDO Shard1-4 (Classic): block reward 3 SCDO in the current era, dropping to 2.5 SCDO at height 9,450,000
 (`consensus/reward.go`); 1 SCDO = 100,000,000 wen. Public P2P seed hosts (TCP + UDP, one port per
 shard as above): `74.208.207.184`, `82.223.19.88`, `74.208.136.152`, `217.160.65.210`.
 
-**Add shard 0 to MetaMask:** RPC URL `https://scdoscan.io/rpc/0`, chain ID `5680`, symbol `SCDO`,
+**Add SCDO Shard0 (EVM) to MetaMask:** network name `SCDO Shard0 (EVM)`, RPC URL `https://scdoscan.io/rpc/0`, chain ID `5680`, symbol `SCDO`,
 explorer `https://scdoscan.io`.
 
 ## Mining
 
-**Shard 0 (GPU, Ethash).** Download the GPU mining package for Windows or Linux (NVIDIA) from
+**SCDO Shard0 (EVM) (GPU, Ethash).** Download the GPU mining package for Windows or Linux (NVIDIA) from
 <https://scdoscan.io/downloads/shard0/> (also in [scdo-gpu-miner releases](https://github.com/SCDOLAB/scdo-gpu-miner/releases)).
 It runs your own shard 0 node plus the `scdo-stratum` proxy on your PC, so the blocks you find pay
 your own address. Any Ethash stratum miner can connect to that local proxy.
 Use the package if you want the rewards yourself.
 
-**Shards 1-4 (ZPoW).** Solo mining with your own go-scdo full node (the history is about 25 GB):
+**SCDO Shard1-4 (Classic) (ZPoW).** Solo mining with your own go-scdo full node (the history is about 25 GB):
 
 ```bash
 curl -fsSL https://scdoscan.io/mine.sh -o mine.sh && bash mine.sh   # Linux x86_64
@@ -48,7 +48,7 @@ curl -fsSL https://scdoscan.io/mine.sh -o mine.sh && bash mine.sh   # Linux x86_
 
 Guide: <https://scdoscan.io/quickstart.html>.
 
-There is no SCDO cloud-mining service. Mining gives no guaranteed value.
+SCDO does not offer a cloud-mining service; mine with your own hardware and your own address.
 
 ## Links
 
@@ -79,14 +79,11 @@ Security issues: please email **admin@apeccapital.org** (do not open public issu
 
 | | |
 |---|---|
-| Operator | **9Y9 PTY LTD**, Melbourne, Victoria, Australia |
+| Operator | **9Y9 PTY LTD** (trading as SCDO Laboratory), 3/251 Blackburn Rd, Mount Waverley VIC 3149, Australia |
 | ACN / ABN | ACN 600 445 118 · ABN 19 600 445 118 |
-| AUSTRAC | Registered Digital Currency Exchange provider, registration **DCE100714503-001** (valid until 14 March 2029). Verify on the [AUSTRAC register](https://online.apps.austrac.gov.au/vaspr) by searching ACN `600445118` |
+| AUSTRAC | Registered Digital Currency Exchange provider, registration **DCE100714503-001**. Verify on the [AUSTRAC register](https://online.apps.austrac.gov.au/vaspr) by searching ACN `600445118` |
 | Compliance | [scdoscan.io/compliance.html](https://scdoscan.io/compliance.html) |
 | External dispute resolution | Member of the [Australian Financial Complaints Authority](https://www.afca.org.au/) (AFCA), member number **124589** |
 
-**Important.** Registration with AUSTRAC is not an endorsement, approval or guarantee by AUSTRAC or
-any other government agency of 9Y9 PTY LTD, SCDO or any software here. AUSTRAC does not assess the
-merits of digital currencies. Nothing in these repositories is an offer of a financial product.
-The software is provided as-is under its open-source licences. Digital assets are highly volatile
-and you can lose all of their value. Do your own research.
+**Important.** Registration does not mean AUSTRAC endorses or approves 9Y9 PTY LTD, SCDO or any product or service.
+The software in these repositories is open source and is provided under its licences.
