@@ -81,7 +81,7 @@ Security issues: please email **admin@apeccapital.org** (do not open public issu
 |---|---|
 | Operator | **9Y9 PTY LTD** (trading as SCDO Laboratory), 3/251 Blackburn Rd, Mount Waverley VIC 3149, Australia |
 | ACN / ABN | ACN 600 445 118 · ABN 19 600 445 118 |
-| AUSTRAC | Registered Digital Currency Exchange provider, registration **DCE100714503-001**. Verify on the [AUSTRAC register](https://online.apps.austrac.gov.au/vaspr) by searching ACN `600445118` |
+| AUSTRAC | Registered Digital Currency Exchange provider, registration **DCE100714503-001** (valid until 14 March 2029). Verify on the [AUSTRAC register](https://online.apps.austrac.gov.au/vaspr) by searching ACN `600445118` |
 | Compliance | [scdoscan.io/compliance.html](https://scdoscan.io/compliance.html) |
 | External dispute resolution | Member of the [Australian Financial Complaints Authority](https://www.afca.org.au/) (AFCA), member number **124589** |
 
