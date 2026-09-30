@@ -8,7 +8,7 @@ SCDO has two parts, both producing blocks:
 
 * **SCDO Shard0 (EVM)**: an EVM chain run by a [core-geth](https://github.com/etclabscore/core-geth) fork,
   Ethash proof of work, **chain ID 5680** (`0x1630`). MetaMask and other Ethereum wallets work directly.
-* **SCDO Shard1 (Classic)** to **SCDO Shard4 (Classic)**: the original sharded proof-of-work chain ([go-scdo](https://github.com/SCDOLAB/go-scdo),
+* **SCDO Shard1 (Classic)**, **SCDO Shard2 (Classic)**, **SCDO Shard3 (Classic)** and **SCDO Shard4 (Classic)**: the original sharded proof-of-work chain ([go-scdo](https://github.com/SCDOLAB/go-scdo),
   ZPoW, cross-shard transactions).
 
 ## Networks
@@ -25,7 +25,7 @@ SCDO Shard0 (EVM) genesis: [scdo-shard0-genesis.json](https://scdoscan.io/downlo
 (genesis hash `0xbbb083…70cb12`). Bootnode:
 `enode://1d2c370db7c419349e2313f20023f6b379f946990042b9b42df45cb56e4c3487df0d36c52cd81308fcdf312450f758a6213fcac21213e94a71af4a3c9392601f@82.223.19.88:30368`
 
-SCDO Shard1-4 (Classic): block reward 3 SCDO in the current era, dropping to 2.5 SCDO at height 9,450,000
+SCDO Shard1 (Classic), SCDO Shard2 (Classic), SCDO Shard3 (Classic) and SCDO Shard4 (Classic): block reward 3 SCDO in the current era, dropping to 2.5 SCDO at height 9,450,000
 (`consensus/reward.go`); 1 SCDO = 100,000,000 wen. Public P2P seed hosts (TCP + UDP, one port per
 shard as above): `74.208.207.184`, `82.223.19.88`, `74.208.136.152`, `217.160.65.210`.
 
@@ -40,7 +40,7 @@ It runs your own shard 0 node plus the `scdo-stratum` proxy on your PC, so the b
 your own address. Any Ethash stratum miner can connect to that local proxy.
 Use the package if you want the rewards yourself.
 
-**SCDO Shard1-4 (Classic) (ZPoW).** Solo mining with your own go-scdo full node (the history is about 25 GB):
+**SCDO Shard1 (Classic), SCDO Shard2 (Classic), SCDO Shard3 (Classic) and SCDO Shard4 (Classic) (ZPoW).** Solo mining with your own go-scdo full node (the history is about 25 GB):
 
 ```bash
 curl -fsSL https://scdoscan.io/mine.sh -o mine.sh && bash mine.sh   # Linux x86_64
@@ -57,7 +57,7 @@ SCDO does not offer a cloud-mining service; mine with your own hardware and your
 | Explorer | <https://scdoscan.io> |
 | Web wallet | <https://scdoscan.io/wallet/> |
 | Shard 0 downloads (GPU miner, genesis, SHA256SUMS) | <https://scdoscan.io/downloads/shard0/> |
-| Shards 1-4 node and client (Linux) | [node](https://scdoscan.io/downloads/scdo-node-linux-amd64), [client](https://scdoscan.io/downloads/scdo-client-linux-amd64), [SHA256SUMS](https://scdoscan.io/downloads/SHA256SUMS) |
+| SCDO Shard1 (Classic), SCDO Shard2 (Classic), SCDO Shard3 (Classic) and SCDO Shard4 (Classic): node and client (Linux) | [node](https://scdoscan.io/downloads/scdo-node-linux-amd64), [client](https://scdoscan.io/downloads/scdo-client-linux-amd64), [SHA256SUMS](https://scdoscan.io/downloads/SHA256SUMS) |
 | Explorer API | `https://scdoscan.io/api/v1` (e.g. [`/network/summary`](https://scdoscan.io/api/v1/network/summary)) |
 
 ## Repositories
@@ -66,7 +66,7 @@ SCDO does not offer a cloud-mining service; mine with your own hardware and your
 |---|---|
 | [scdo-shard0](https://github.com/SCDOLAB/scdo-shard0) | Shard 0 node: core-geth v1.12.23 fork (branch `scdo`) with the `scdo-stratum` proxy, faucet and the chain ID 5680 genesis |
 | [scdo-gpu-miner](https://github.com/SCDOLAB/scdo-gpu-miner) | Shard 0 GPU mining package scripts and releases |
-| [go-scdo](https://github.com/SCDOLAB/go-scdo) | Client for shards 1-4: node, client, miner, seed configs, `mine.sh` |
+| [go-scdo](https://github.com/SCDOLAB/go-scdo) | Client for SCDO Shard1 (Classic), SCDO Shard2 (Classic), SCDO Shard3 (Classic) and SCDO Shard4 (Classic): node, client, miner, seed configs, `mine.sh` |
 | [scdoscan-api](https://github.com/SCDOLAB/scdoscan-api) | Explorer backend (MongoDB indexer and REST API behind scdoscan.io) |
 
 Archived, for reference only: [scdo-shard0-parallel-legacy](https://github.com/SCDOLAB/scdo-shard0-parallel-legacy)
@@ -79,7 +79,7 @@ Security issues: please email **admin@apeccapital.org** (do not open public issu
 
 | | |
 |---|---|
-| Operator | **9Y9 PTY LTD** (trading as SCDO Laboratory), 3/251 Blackburn Rd, Mount Waverley VIC 3149 (Melbourne), Australia |
+| Operator | **9Y9 PTY LTD** (trading as SCDO Laboratory), Melbourne, Australia |
 | ACN / ABN | ACN 600 445 118 · ABN 19 600 445 118 |
 | AUSTRAC | Registered Digital Currency Exchange provider, registration **DCE100714503-001** (valid until 14 March 2029). Verify on the [AUSTRAC register](https://online.apps.austrac.gov.au/vaspr) by searching ACN `600445118` |
 | Compliance | [scdoscan.io/compliance.html](https://scdoscan.io/compliance.html) |
