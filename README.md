@@ -1,5 +1,7 @@
 # SCDOLAB
 
+[![Telegram](https://img.shields.io/badge/Telegram-@SCDOLabor-26A5E4?logo=telegram&logoColor=white)](https://t.me/SCDOLabor)
+
 Open-source software for the **SCDO** blockchain. The only official website is
 **[scdoscan.io](https://scdoscan.io)** (explorer, web wallet, downloads). Treat any other
 site, app or "pool" that uses the SCDO name as unaffiliated.
