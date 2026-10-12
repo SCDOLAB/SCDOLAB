@@ -89,3 +89,8 @@ Security issues: please email **admin@apeccapital.org** (do not open public issu
 
 **Important.** Registration does not mean AUSTRAC endorses or approves 9Y9 PTY LTD, SCDO or any product or service.
 The software in these repositories is open source and is provided under its licences.
+
+## AI Agent Ledger
+Live: https://scdoscan.io/agent-ledger/
+Every SCDO Wallet and miner registers as an agent with its own key and signs its own heartbeats (hashrate, peers, block height, GPU temperature) and self-heal events. The server only verifies signatures and holds no private keys. On-chain settlement is not yet live.
+Paper: https://doi.org/10.5281/zenodo.23209794
