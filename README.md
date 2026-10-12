@@ -94,3 +94,8 @@ The software in these repositories is open source and is provided under its lice
 Live: https://scdoscan.io/agent-ledger/
 Every SCDO Wallet and miner registers as an agent with its own key and signs its own heartbeats (hashrate, peers, block height, GPU temperature) and self-heal events. The server only verifies signatures and holds no private keys. On-chain settlement is not yet live.
 Paper: https://doi.org/10.5281/zenodo.23209794
+
+## x402 GPU compute payments
+AI agents can pay for SCDO GPU compute per job with USDC via the x402 protocol on Base mainnet: 0.01 USDC per job. Each payment is recorded in the compute ledger.
+Endpoint: https://scdoscan.io/gpu-share/api/x402/job
+First settlement: [0xadc0ed9f23ba38b5ce3bc68f3a91dfaa18067caa00a188b1dac15cbd52dc0ddb](https://basescan.org/tx/0xadc0ed9f23ba38b5ce3bc68f3a91dfaa18067caa00a188b1dac15cbd52dc0ddb) (Base block 52515858)
