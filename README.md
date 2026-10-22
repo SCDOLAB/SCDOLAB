@@ -6,6 +6,10 @@ Open-source software for the **SCDO** blockchain. The only official website is
 **[scdoscan.io](https://scdoscan.io)** (explorer, web wallet, downloads). Treat any other
 site, app or "pool" that uses the SCDO name as unaffiliated.
 
+> **🤖 SCDO Agent Ledger — [github.com/SCDOLAB/scdo-agent-ledger](https://github.com/SCDOLAB/scdo-agent-ledger)**
+> ERC-8004-format AI agent identity registry with x402 USDC pay-per-call on Base: free registration,
+> `registration.json` schema, live agent catalog. Live: <https://scdo.com.au/agents/> · verify: `POST https://scdo.com.au/agents/api/verify`
+
 SCDO has two parts, both producing blocks:
 
 * **SCDO Shard0 (EVM)**: an EVM chain run by a [core-geth](https://github.com/etclabscore/core-geth) fork,
@@ -66,6 +70,7 @@ SCDO does not offer a cloud-mining service; mine with your own hardware and your
 
 | Repository | What it is |
 |---|---|
+| [scdo-agent-ledger](https://github.com/SCDOLAB/scdo-agent-ledger) | SCDO Agent Ledger: ERC-8004-format AI agent registry, `registration.json` schema, x402 pay-per-call, live catalog at [scdo.com.au/agents](https://scdo.com.au/agents/) |
 | [scdo-shard0](https://github.com/SCDOLAB/scdo-shard0) | Shard 0 node: core-geth v1.12.23 fork (branch `scdo`) with the `scdo-stratum` proxy, faucet and the chain ID 5680 genesis |
 | [scdo-gpu-miner](https://github.com/SCDOLAB/scdo-gpu-miner) | Shard 0 GPU mining package scripts and releases |
 | [go-scdo](https://github.com/SCDOLAB/go-scdo) | Client for SCDO Shard1 (Classic), SCDO Shard2 (Classic), SCDO Shard3 (Classic) and SCDO Shard4 (Classic): node, client, miner, seed configs, `mine.sh` |
@@ -91,7 +96,7 @@ Security issues: please email **admin@apeccapital.org** (do not open public issu
 The software in these repositories is open source and is provided under its licences.
 
 ## AI Agent Ledger
-Live: https://scdoscan.io/agent-ledger/
+Repo: https://github.com/SCDOLAB/scdo-agent-ledger · Live: https://scdo.com.au/agent-ledger/ · Agents: https://scdo.com.au/agents/
 Every SCDO Wallet and miner registers as an agent with its own key and signs its own heartbeats (hashrate, peers, block height, GPU temperature) and self-heal events. The server only verifies signatures and holds no private keys. On-chain settlement is not yet live.
 Paper: https://doi.org/10.5281/zenodo.23209794
 
